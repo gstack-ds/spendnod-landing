@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SpendNod — Privacy Policy</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg: #0B0F1A;
+  --bg-card: #111827;
+  --bg-surface: #0f1629;
+  --accent: #4F46E5;
+  --accent-light: #6366F1;
+  --text: #E2E8F0;
+  --text-dim: #94A3B8;
+  --text-muted: #64748B;
+  --border: #1E293B;
+  --white: #F8FAFC;
+}
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+}
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(11, 15, 26, 0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 24px;
+}
+.nav-inner {
+  max-width: 1100px; margin: 0 auto; display: flex;
+  justify-content: space-between; align-items: center; height: 60px;
+}
+.nav-logo {
+  font-family: 'DM Sans', sans-serif; font-weight: 700;
+  font-size: 18px; color: var(--white);
+  display: flex; align-items: center; gap: 10px;
+  text-decoration: none;
+}
+.nav-logo svg { width: 28px; height: 28px; }
+.nav-links { display: flex; gap: 24px; align-items: center; }
+.nav-links a {
+  color: var(--text-dim); font-size: 14px; font-weight: 500;
+  text-decoration: none; transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--white); }
+.content {
+  max-width: 800px; margin: 0 auto;
+  padding: 100px 24px 60px;
+}
+.content h1 {
+  font-family: 'DM Sans', sans-serif; font-size: 36px;
+  font-weight: 700; color: var(--white); margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+.content h2 {
+  font-family: 'DM Sans', sans-serif; font-size: 24px;
+  font-weight: 600; color: var(--white); margin-top: 48px;
+  margin-bottom: 16px; padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+.content h3 {
+  font-family: 'DM Sans', sans-serif; font-size: 18px;
+  font-weight: 600; color: var(--white); margin-top: 32px;
+  margin-bottom: 12px;
+}
+.content p {
+  margin-bottom: 16px; color: var(--text);
+}
+.content ul, .content ol {
+  margin-bottom: 16px; padding-left: 24px;
+}
+.content li {
+  margin-bottom: 8px; color: var(--text);
+}
+.content strong { color: var(--white); }
+.content a { color: var(--accent-light); text-decoration: none; }
+.content a:hover { text-decoration: underline; }
+.content hr { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
+footer {
+  border-top: 1px solid var(--border);
+  padding: 32px 24px;
+  text-align: center;
+}
+.footer-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.footer-left { font-size: 13px; color: var(--text-muted); }
+.footer-links { display: flex; gap: 24px; }
+.footer-links a { font-size: 13px; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: var(--text); }
+@media (max-width: 768px) {
+  .content h1 { font-size: 28px; }
+  .content h2 { font-size: 20px; }
+  .nav-links { display: none; }
+  .footer-inner { flex-direction: column; gap: 12px; }
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <svg viewBox="0 0 28 28" fill="none"><path d="M14 2L4 8v12l10 6 10-6V8L14 2z" stroke="#6366F1" stroke-width="2" fill="rgba(79,70,229,0.1)"/><path d="M14 10v8M10 14h8" stroke="#6366F1" stroke-width="2" stroke-linecap="round"/></svg>
+      SpendNod
+    </a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/enterprise">Enterprise</a>
+      <a href="https://api.spendnod.com/docs" target="_blank">API Docs</a>
+    </div>
+  </div>
+</nav>
+<div class="content">
+<h1>SpendNod — Privacy Policy</h1>
+<p><strong>Last Updated:</strong> March 27, 2026
+<strong>Effective Date:</strong> March 27, 2026</p>
+<hr />
+<h2>1. Introduction</h2>
+<p>Stack Industries LLC ("Company," "we," "us," or "our") operates SpendNod, an authorization gateway for AI agent transactions. This Privacy Policy describes how we collect, use, store, and protect your information when you use our platform, API, SDK, dashboard, and related services (collectively, the "Service").</p>
+<h2>2. Information We Collect</h2>
+<h3>2.1 Account Information</h3>
+<p>When you create an account, we collect:</p>
+<ul>
+<li>Email address</li>
+<li>Name (if provided)</li>
+<li>Password (stored as a hash, never in plaintext)</li>
+</ul>
+<h3>2.2 Agent and Configuration Data</h3>
+<p>When you use the Service, we collect:</p>
+<ul>
+<li>Agent registration details (agent names, API key hashes)</li>
+<li>Rule configurations (spending thresholds, vendor lists, category restrictions)</li>
+<li>Authorization request data (action type, amount, vendor, category, description)</li>
+<li>Authorization decisions (approved, denied, pending, expired)</li>
+<li>Approval/denial reasons provided by you</li>
+</ul>
+<h3>2.3 Audit Log Data</h3>
+<p>We automatically log:</p>
+<ul>
+<li>All authorization requests and decisions</li>
+<li>Rule creation, modification, and deletion events</li>
+<li>Agent registration and revocation events</li>
+<li>Timestamps and decision metadata</li>
+</ul>
+<h3>2.4 Technical Data</h3>
+<p>We may collect:</p>
+<ul>
+<li>IP addresses</li>
+<li>Browser type and version</li>
+<li>Device information</li>
+<li>Usage patterns and feature interactions</li>
+</ul>
+<h3>2.5 What We Do NOT Collect</h3>
+<p>SpendNod does not collect, process, or store:</p>
+<ul>
+<li>Credit card numbers, bank account numbers, or payment credentials</li>
+<li>Social Security numbers or government IDs</li>
+<li>Actual payment transaction data (we only see authorization metadata)</li>
+<li>Data from the AI agents themselves beyond what is submitted in authorization requests</li>
+</ul>
+<h2>3. How We Use Your Information</h2>
+<p>We use your information to:</p>
+<ul>
+<li>Provide and maintain the Service</li>
+<li>Process authorization requests and enforce your configured rules</li>
+<li>Send notifications about pending authorization requests</li>
+<li>Maintain audit logs for your compliance needs</li>
+<li>Communicate with you about your account, updates, and service changes</li>
+<li>Monitor and improve the Service's performance and security</li>
+<li>Enforce our Terms of Service</li>
+</ul>
+<p>We do NOT use your information to:</p>
+<ul>
+<li>Sell to third parties</li>
+<li>Target advertising</li>
+<li>Train AI models on your authorization data</li>
+<li>Share with third parties except as described in this policy</li>
+</ul>
+<h2>4. How We Store and Protect Your Information</h2>
+<h3>4.1 Data Storage</h3>
+<p>Your data is stored on:</p>
+<ul>
+<li>Supabase (PostgreSQL database) hosted in the United States</li>
+<li>Railway (backend hosting) in the United States</li>
+<li>Vercel (frontend hosting) with global CDN</li>
+</ul>
+<h3>4.2 Security Measures</h3>
+<p>We implement reasonable security measures including:</p>
+<ul>
+<li>Encryption in transit (TLS/HTTPS)</li>
+<li>API key storage using SHA-256 hashing</li>
+<li>JWT-based authentication with asymmetric key verification (ES256)</li>
+<li>Role-based access (agents can only access their own authorization data, users can only access their own agents)</li>
+<li>Rate limiting on API endpoints</li>
+</ul>
+<h3>4.3 Data Retention</h3>
+<ul>
+<li>Account data: retained until you delete your account</li>
+<li>Audit logs: retained according to your plan tier (7 days for Free, 30 days for Starter, 90 days for Pro, 1 year for Business)</li>
+<li>Authorization request data: retained according to your plan tier</li>
+<li>After the retention period, data may be permanently deleted</li>
+</ul>
+<h2>5. Information Sharing</h2>
+<p>We may share your information only in these circumstances:</p>
+<h3>5.1 Service Providers</h3>
+<p>We use third-party service providers to operate the Service:</p>
+<ul>
+<li><strong>Supabase</strong> — database and authentication</li>
+<li><strong>Railway</strong> — backend hosting</li>
+<li><strong>Vercel</strong> — frontend hosting</li>
+<li><strong>Resend</strong> — email notifications</li>
+</ul>
+<p>These providers process data on our behalf and are contractually obligated to protect your information.</p>
+<h3>5.2 Legal Requirements</h3>
+<p>We may disclose your information if required by law, subpoena, court order, or government request, or if we believe disclosure is necessary to protect our rights, your safety, or the safety of others.</p>
+<h3>5.3 Business Transfers</h3>
+<p>If Stack Industries LLC is involved in a merger, acquisition, or sale of assets, your information may be transferred as part of that transaction. We will notify you of any such change.</p>
+<h3>5.4 With Your Consent</h3>
+<p>We may share information with third parties when you explicitly consent to such sharing.</p>
+<h2>6. Your Rights</h2>
+<h3>6.1 Access and Export</h3>
+<p>You can access your data through the dashboard and API at any time. Paid plans include data export functionality.</p>
+<h3>6.2 Correction</h3>
+<p>You can update your account information through the dashboard.</p>
+<h3>6.3 Deletion</h3>
+<p>You can request deletion of your account and associated data by contacting us. Upon deletion:</p>
+<ul>
+<li>Your account will be deactivated</li>
+<li>Your API keys will be revoked</li>
+<li>Your data will be permanently deleted within 30 days</li>
+<li>Some data may be retained as required by law</li>
+</ul>
+<h3>6.4 GDPR Rights (for EU residents)</h3>
+<p>If you are located in the European Union, you have additional rights under the General Data Protection Regulation, including:</p>
+<ul>
+<li>Right to access your personal data</li>
+<li>Right to rectification of inaccurate data</li>
+<li>Right to erasure ("right to be forgotten")</li>
+<li>Right to restrict processing</li>
+<li>Right to data portability</li>
+<li>Right to object to processing</li>
+</ul>
+<p>To exercise these rights, contact us at the address in Section 10.</p>
+<h3>6.5 CCPA Rights (for California residents)</h3>
+<p>If you are a California resident, you have rights under the California Consumer Privacy Act, including:</p>
+<ul>
+<li>Right to know what personal information we collect</li>
+<li>Right to delete your personal information</li>
+<li>Right to opt-out of the sale of personal information (we do not sell personal information)</li>
+<li>Right to non-discrimination for exercising your rights</li>
+</ul>
+<h2>7. Cookies and Tracking</h2>
+<p>The dashboard uses essential cookies for authentication and session management. We do not use tracking cookies, advertising cookies, or third-party analytics that track you across websites.</p>
+<h2>8. Children's Privacy</h2>
+<p>The Service is not intended for use by anyone under the age of 18. We do not knowingly collect information from children. If we learn that we have collected information from a child, we will delete it promptly.</p>
+<h2>9. Changes to This Policy</h2>
+<p>We may update this Privacy Policy from time to time. We will notify you of material changes by email or through the Service at least 30 days before they take effect. Your continued use of the Service after changes take effect constitutes acceptance of the updated policy.</p>
+<h2>10. Contact</h2>
+<p>For privacy-related questions or to exercise your data rights, contact:</p>
+<p>Stack Industries LLC
+Email: gary@stackindustries.com
+Website: https://spendnod.com</p>
+<hr />
+<p><strong>By using SpendNod, you acknowledge that you have read and understood this Privacy Policy.</strong></p>
+</div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-left">&copy; 2026 Stack Industries LLC. All rights reserved.</div>
+    <div class="footer-links">
+      <a href="/terms">Terms of Service</a>
+      <a href="/privacy">Privacy Policy</a>
+      <a href="https://api.spendnod.com/docs" target="_blank">API Docs</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

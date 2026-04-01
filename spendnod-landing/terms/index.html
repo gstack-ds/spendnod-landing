@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SpendNod — Terms of Service</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg: #0B0F1A;
+  --bg-card: #111827;
+  --bg-surface: #0f1629;
+  --accent: #4F46E5;
+  --accent-light: #6366F1;
+  --text: #E2E8F0;
+  --text-dim: #94A3B8;
+  --text-muted: #64748B;
+  --border: #1E293B;
+  --white: #F8FAFC;
+}
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+}
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(11, 15, 26, 0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 24px;
+}
+.nav-inner {
+  max-width: 1100px; margin: 0 auto; display: flex;
+  justify-content: space-between; align-items: center; height: 60px;
+}
+.nav-logo {
+  font-family: 'DM Sans', sans-serif; font-weight: 700;
+  font-size: 18px; color: var(--white);
+  display: flex; align-items: center; gap: 10px;
+  text-decoration: none;
+}
+.nav-logo svg { width: 28px; height: 28px; }
+.nav-links { display: flex; gap: 24px; align-items: center; }
+.nav-links a {
+  color: var(--text-dim); font-size: 14px; font-weight: 500;
+  text-decoration: none; transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--white); }
+.content {
+  max-width: 800px; margin: 0 auto;
+  padding: 100px 24px 60px;
+}
+.content h1 {
+  font-family: 'DM Sans', sans-serif; font-size: 36px;
+  font-weight: 700; color: var(--white); margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+.content h2 {
+  font-family: 'DM Sans', sans-serif; font-size: 24px;
+  font-weight: 600; color: var(--white); margin-top: 48px;
+  margin-bottom: 16px; padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+.content h3 {
+  font-family: 'DM Sans', sans-serif; font-size: 18px;
+  font-weight: 600; color: var(--white); margin-top: 32px;
+  margin-bottom: 12px;
+}
+.content p {
+  margin-bottom: 16px; color: var(--text);
+}
+.content ul, .content ol {
+  margin-bottom: 16px; padding-left: 24px;
+}
+.content li {
+  margin-bottom: 8px; color: var(--text);
+}
+.content strong { color: var(--white); }
+.content a { color: var(--accent-light); text-decoration: none; }
+.content a:hover { text-decoration: underline; }
+.content hr { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
+footer {
+  border-top: 1px solid var(--border);
+  padding: 32px 24px;
+  text-align: center;
+}
+.footer-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.footer-left { font-size: 13px; color: var(--text-muted); }
+.footer-links { display: flex; gap: 24px; }
+.footer-links a { font-size: 13px; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: var(--text); }
+@media (max-width: 768px) {
+  .content h1 { font-size: 28px; }
+  .content h2 { font-size: 20px; }
+  .nav-links { display: none; }
+  .footer-inner { flex-direction: column; gap: 12px; }
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <svg viewBox="0 0 28 28" fill="none"><path d="M14 2L4 8v12l10 6 10-6V8L14 2z" stroke="#6366F1" stroke-width="2" fill="rgba(79,70,229,0.1)"/><path d="M14 10v8M10 14h8" stroke="#6366F1" stroke-width="2" stroke-linecap="round"/></svg>
+      SpendNod
+    </a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/enterprise">Enterprise</a>
+      <a href="https://api.spendnod.com/docs" target="_blank">API Docs</a>
+    </div>
+  </div>
+</nav>
+<div class="content">
+<h1>SpendNod — Terms of Service</h1>
+<p><strong>Last Updated:</strong> March 27, 2026
+<strong>Effective Date:</strong> March 27, 2026</p>
+<hr />
+<h2>1. Introduction and Acceptance</h2>
+<p>These Terms of Service ("Terms") govern your access to and use of the SpendNod platform, API, SDK, dashboard, and related services (collectively, the "Service") operated by Stack Industries LLC ("Company," "we," "us," or "our").</p>
+<p>By creating an account, accessing, or using the Service, you ("User," "you," or "your") agree to be bound by these Terms. If you do not agree, do not use the Service.</p>
+<p>If you are using the Service on behalf of a business or other legal entity, you represent that you have the authority to bind that entity to these Terms.</p>
+<h2>2. Description of Service</h2>
+<p>SpendNod is an authorization gateway that provides a configurable rules engine and human-in-the-loop approval workflow for AI agent transactions. The Service allows users to:</p>
+<ul>
+<li>Register AI agents and issue API credentials</li>
+<li>Define authorization rules (spending thresholds, vendor restrictions, category controls, velocity limits)</li>
+<li>Review, approve, or deny pending authorization requests</li>
+<li>Access audit logs of all authorization decisions</li>
+</ul>
+<p><strong>SpendNod is NOT a payment processor, financial institution, money transmitter, bank, or financial advisor.</strong> SpendNod does not process, hold, transfer, or have access to any funds. SpendNod does not execute transactions. SpendNod provides an authorization decision layer only — actual payment processing occurs through third-party payment providers chosen by the User.</p>
+<h2>3. User Accounts</h2>
+<h3>3.1 Registration</h3>
+<p>You must provide accurate and complete information when creating an account. You are responsible for maintaining the confidentiality of your account credentials.</p>
+<h3>3.2 API Keys</h3>
+<p>API keys issued through the Service are confidential credentials. You are solely responsible for all activity that occurs under your API keys. You must immediately notify us if you become aware of any unauthorized use of your credentials.</p>
+<h3>3.3 Account Security</h3>
+<p>You are responsible for maintaining the security of your account, including but not limited to: safeguarding API keys, configuring appropriate authorization rules, and monitoring agent activity through the dashboard and audit logs.</p>
+<h2>4. User Responsibilities — Rule Configuration</h2>
+<h3>4.1 You Control the Rules</h3>
+<p>SpendNod provides tools for you to configure authorization rules for your AI agents. <strong>You are solely responsible for configuring rules that are appropriate for your use case and risk tolerance.</strong> This includes but is not limited to: setting spending thresholds, defining approved and blocked vendors, establishing daily and monthly spending limits, and configuring approval requirements.</p>
+<h3>4.2 Conservative Defaults</h3>
+<p>New agents registered on the platform default to requiring human approval for all requests ("pending" status) until you explicitly configure auto-approval rules. By modifying these defaults, you acknowledge and accept the risks associated with your chosen configuration.</p>
+<h3>4.3 Rule Configuration Warnings</h3>
+<p>The Service may display warnings when you configure rules that could result in high-value auto-approvals. These warnings are informational and do not constitute financial advice. The decision to accept or modify your rule configuration is yours alone.</p>
+<h3>4.4 No Guarantee of Loss Prevention</h3>
+<p>While SpendNod is designed to provide authorization controls for AI agent transactions, <strong>we do not guarantee that the Service will prevent unauthorized, unintended, or excessive transactions.</strong> The Service enforces rules as configured by you. If your rules permit a transaction, the Service will authorize it. Software systems may experience bugs, downtime, or other issues that could affect rule enforcement.</p>
+<h2>5. Prohibited Uses</h2>
+<p>You agree not to use the Service to:</p>
+<ul>
+<li>Violate any applicable law, regulation, or third-party rights</li>
+<li>Process, store, or transmit sensitive financial data (credit card numbers, bank account numbers) through SpendNod's API — the Service handles authorization metadata only</li>
+<li>Attempt to circumvent rate limits, usage quotas, or security measures</li>
+<li>Reverse-engineer, decompile, or attempt to derive the source code of the Service</li>
+<li>Use the Service to facilitate fraud, money laundering, or other financial crimes</li>
+<li>Resell or redistribute access to the Service without written authorization</li>
+<li>Transmit malicious code or attempt to gain unauthorized access to our systems</li>
+</ul>
+<h2>6. Intellectual Property</h2>
+<h3>6.1 Our Property</h3>
+<p>The Service, including all software, APIs, documentation, dashboard interfaces, and related technology, is the property of Stack Industries LLC and is protected by intellectual property laws. These Terms do not grant you any rights to our trademarks, branding, or proprietary technology.</p>
+<h3>6.2 Your Data</h3>
+<p>You retain ownership of all data you submit to or generate through the Service, including agent configurations, rules, and authorization request data. We do not claim ownership of your data.</p>
+<h3>6.3 License to Use Your Data</h3>
+<p>You grant us a limited license to use your data solely for the purpose of providing and improving the Service. We will not sell your data to third parties.</p>
+<h2>7. Service Plans and Billing</h2>
+<h3>7.1 Free Tier</h3>
+<p>The free tier provides limited access to the Service as described on our pricing page. We reserve the right to modify free tier limits at any time.</p>
+<h3>7.2 Paid Plans</h3>
+<p>Paid plans are billed monthly or annually as selected at the time of purchase. Features, limits, and pricing for each tier are described on our pricing page and may be updated with 30 days notice.</p>
+<h3>7.3 Overages</h3>
+<p>If your usage exceeds your plan's included limits, overage charges may apply at the rates specified in your plan. Your Service will not be interrupted due to overages — your agents will continue to function, and overage charges will appear on your next invoice.</p>
+<h3>7.4 Refunds</h3>
+<p>Subscription fees are non-refundable except as required by applicable law. If you believe there has been a billing error, contact us within 30 days.</p>
+<h2>8. Limitation of Liability</h2>
+<h3>8.1 No Liability for Authorized Transactions</h3>
+<p><strong>SpendNod is an authorization layer, not a payment processor.</strong> We do not execute, process, or facilitate financial transactions. If your AI agent completes a transaction that was authorized by your configured rules (whether auto-approved or human-approved), we bear no liability for that transaction, regardless of the amount.</p>
+<h3>8.2 No Liability for Rule Configuration</h3>
+<p>You are solely responsible for configuring authorization rules appropriate for your use case. We are not liable for any losses, damages, or costs resulting from rule configurations that you created, modified, or failed to create.</p>
+<h3>8.3 General Limitation</h3>
+<p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL STACK INDUSTRIES LLC, ITS OFFICERS, DIRECTORS, EMPLOYEES, OR AGENTS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING WITHOUT LIMITATION: LOSS OF PROFITS, DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES, RESULTING FROM:</p>
+<ul>
+<li>YOUR ACCESS TO OR USE OF (OR INABILITY TO ACCESS OR USE) THE SERVICE</li>
+<li>ANY TRANSACTIONS AUTHORIZED OR DENIED THROUGH THE SERVICE</li>
+<li>ANY UNAUTHORIZED ACCESS TO OR ALTERATION OF YOUR DATA OR RULE CONFIGURATIONS</li>
+<li>ANY INTERRUPTION OR CESSATION OF THE SERVICE</li>
+<li>ANY BUGS, ERRORS, OR INACCURACIES IN THE SERVICE</li>
+</ul>
+<h3>8.4 Maximum Liability</h3>
+<p>OUR TOTAL AGGREGATE LIABILITY ARISING FROM OR RELATED TO THESE TERMS OR THE SERVICE SHALL NOT EXCEED THE GREATER OF: (A) THE AMOUNT YOU PAID US IN THE TWELVE (12) MONTHS PRECEDING THE CLAIM, OR (B) ONE HUNDRED DOLLARS ($100 USD).</p>
+<h3>8.5 Acknowledgment</h3>
+<p>You acknowledge that SpendNod is a tool to assist with authorization decisions, not a guarantee against financial loss. You acknowledge that you are responsible for implementing additional safeguards appropriate to your use case, including but not limited to: monitoring agent activity, reviewing audit logs, setting appropriate spending limits, and maintaining your own financial controls independent of SpendNod.</p>
+<h2>9. Indemnification</h2>
+<p>You agree to indemnify, defend, and hold harmless Stack Industries LLC and its officers, directors, employees, and agents from any claims, damages, losses, costs, or expenses (including reasonable attorneys' fees) arising from:</p>
+<ul>
+<li>Your use of the Service</li>
+<li>Your rule configurations and authorization decisions</li>
+<li>Transactions authorized through your account</li>
+<li>Your violation of these Terms</li>
+<li>Your violation of any applicable law or third-party rights</li>
+</ul>
+<h2>10. Service Availability and Disclaimers</h2>
+<h3>10.1 Availability</h3>
+<p>We strive to maintain high availability of the Service but do not guarantee uninterrupted access. The Service may experience downtime for maintenance, updates, or unforeseen technical issues. We are not liable for any losses resulting from Service unavailability.</p>
+<h3>10.2 "As Is" Disclaimer</h3>
+<p>THE SERVICE IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. WE DO NOT WARRANT THAT THE SERVICE WILL BE UNINTERRUPTED, ERROR-FREE, OR COMPLETELY SECURE.</p>
+<h3>10.3 No Financial Advice</h3>
+<p>Nothing in the Service constitutes financial, legal, or professional advice. The rule templates, thresholds, and configurations provided by the Service are suggestions only and should not be relied upon as professional guidance.</p>
+<h2>11. Data and Privacy</h2>
+<h3>11.1 Data Processing</h3>
+<p>We process data necessary to provide the Service, including: account information, agent configurations, authorization requests, and audit logs. Our processing of personal data is governed by our Privacy Policy.</p>
+<h3>11.2 Data Retention</h3>
+<p>Audit log retention periods vary by plan tier. Data is retained for the period specified in your plan and may be deleted after that period. You are responsible for exporting data you wish to retain beyond your plan's retention period.</p>
+<h3>11.3 Data Security</h3>
+<p>We implement reasonable security measures to protect your data, including encryption in transit, secure credential storage, and access controls. However, no method of electronic transmission or storage is 100% secure, and we cannot guarantee absolute security.</p>
+<h2>12. Compliance</h2>
+<h3>12.1 Your Compliance Obligations</h3>
+<p>You are responsible for ensuring that your use of the Service complies with all applicable laws and regulations, including but not limited to: financial regulations, data protection laws (including GDPR if applicable), consumer protection laws, and industry-specific requirements.</p>
+<h3>12.2 EU AI Act</h3>
+<p>SpendNod provides audit trail and human oversight capabilities that may assist with EU AI Act compliance obligations. However, <strong>use of SpendNod does not automatically make your AI systems compliant with the EU AI Act or any other regulation.</strong> You are responsible for ensuring your overall AI governance meets applicable regulatory requirements.</p>
+<h3>12.3 Export Controls</h3>
+<p>You agree not to use the Service in violation of any applicable export control laws or sanctions.</p>
+<h2>13. Termination</h2>
+<h3>13.1 By You</h3>
+<p>You may terminate your account at any time by contacting us or using the account deletion feature in the dashboard. Termination does not entitle you to a refund of pre-paid fees.</p>
+<h3>13.2 By Us</h3>
+<p>We may suspend or terminate your account if we reasonably believe you have violated these Terms, if required by law, or if your account poses a security risk to the Service or other users. We will make reasonable efforts to notify you before termination except where prohibited by law or where immediate action is necessary.</p>
+<h3>13.3 Effect of Termination</h3>
+<p>Upon termination: your access to the Service will cease, your API keys will be revoked, and your agents will no longer be able to submit authorization requests. We may retain audit log data as required by law or for legitimate business purposes.</p>
+<h2>14. Modifications to Terms</h2>
+<p>We may update these Terms from time to time. We will notify you of material changes by email or through the Service at least 30 days before they take effect. Your continued use of the Service after changes take effect constitutes acceptance of the updated Terms.</p>
+<h2>15. Dispute Resolution</h2>
+<h3>15.1 Governing Law</h3>
+<p>These Terms shall be governed by and construed in accordance with the laws of the State of Iowa, without regard to its conflict of laws provisions.</p>
+<h3>15.2 Informal Resolution</h3>
+<p>Before filing any formal dispute, you agree to contact us and attempt to resolve the dispute informally for at least 30 days.</p>
+<h3>15.3 Arbitration</h3>
+<p>Any disputes not resolved informally shall be resolved through binding arbitration in accordance with the rules of the American Arbitration Association. The arbitration shall be conducted in Des Moines, Iowa.</p>
+<h3>15.4 Class Action Waiver</h3>
+<p>You agree that any disputes will be resolved on an individual basis and not as part of a class, consolidated, or representative action.</p>
+<h2>16. General Provisions</h2>
+<h3>16.1 Entire Agreement</h3>
+<p>These Terms, together with the Privacy Policy, constitute the entire agreement between you and Stack Industries LLC regarding the Service.</p>
+<h3>16.2 Severability</h3>
+<p>If any provision of these Terms is found unenforceable, the remaining provisions will continue in full force and effect.</p>
+<h3>16.3 Waiver</h3>
+<p>Our failure to enforce any provision of these Terms shall not constitute a waiver of that provision.</p>
+<h3>16.4 Assignment</h3>
+<p>You may not assign these Terms without our prior written consent. We may assign these Terms in connection with a merger, acquisition, or sale of assets.</p>
+<h2>17. Contact</h2>
+<p>For questions about these Terms, contact:</p>
+<p>Stack Industries LLC
+Email: gary@stackindustries.com
+Website: https://spendnod.com</p>
+<hr />
+<p><strong>By using SpendNod, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.</strong></p>
+</div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-left">&copy; 2026 Stack Industries LLC. All rights reserved.</div>
+    <div class="footer-links">
+      <a href="/terms">Terms of Service</a>
+      <a href="/privacy">Privacy Policy</a>
+      <a href="https://api.spendnod.com/docs" target="_blank">API Docs</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
