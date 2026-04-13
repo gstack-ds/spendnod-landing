@@ -248,8 +248,98 @@ footer {
 .fade-up-2 { animation-delay: 0.2s; }
 .fade-up-3 { animation-delay: 0.3s; }
 
+/* MOBILE NAV */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  -webkit-tap-highlight-color: transparent;
+}
+.hamburger:hover { background: rgba(255,255,255,0.06); }
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--white);
+  border-radius: 2px;
+  pointer-events: none;
+}
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 64px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(9,9,11,0.98);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 99;
+  flex-direction: column;
+  padding: 0 24px 40px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu-close {
+  align-self: flex-end;
+  margin: 16px 0 8px;
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  font-size: 24px;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  transition: color 0.2s, background 0.2s;
+  -webkit-tap-highlight-color: transparent;
+}
+.mobile-menu-close:hover { color: var(--white); background: rgba(255,255,255,0.06); }
+.mobile-menu a {
+  color: var(--text-dim);
+  font-size: 18px;
+  font-weight: 500;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--border);
+  text-decoration: none;
+  font-family: 'DM Sans', sans-serif;
+  transition: color 0.2s;
+  display: block;
+  -webkit-tap-highlight-color: transparent;
+}
+.mobile-menu a:hover, .mobile-menu a:active { color: var(--white); }
+.mobile-menu-cta {
+  margin-top: 28px;
+  background: var(--accent);
+  color: white;
+  padding: 16px;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-family: 'DM Sans', sans-serif;
+  transition: background 0.2s;
+  -webkit-tap-highlight-color: transparent;
+}
+.mobile-menu-cta:hover, .mobile-menu-cta:active { background: var(--accent-light); }
+
 @media (max-width: 768px) {
   .nav-links { display: none; }
+  .hamburger { display: flex; }
   .risk-grid { grid-template-columns: 1fr; }
   .compliance-grid { grid-template-columns: 1fr; }
   .enterprise-flow { grid-template-columns: 1fr; }
@@ -275,8 +365,21 @@ footer {
       <a href="/">For developers</a>
       <button class="nav-cta" onclick="window.location.href='mailto:garystack13@gmail.com?subject=SpendNod Enterprise Inquiry'">Contact sales</button>
     </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <button class="mobile-menu-close" id="mobile-close" aria-label="Close menu">&#x2715;</button>
+  <a href="#compliance">Compliance</a>
+  <a href="#how-it-works">How it works</a>
+  <a href="#pricing">Pricing</a>
+  <a href="https://api.spendnod.com/docs" target="_blank">API docs</a>
+  <a href="/">For developers</a>
+  <button class="mobile-menu-cta" onclick="window.location.href='mailto:garystack13@gmail.com?subject=SpendNod Enterprise Inquiry'">Contact sales</button>
+</div>
 
 <!-- HERO -->
 <div class="hero">
@@ -500,6 +603,37 @@ footer {
     </div>
   </div>
 </footer>
+
+<script>
+(function() {
+  var btn = document.getElementById('hamburger');
+  var menu = document.getElementById('mobile-menu');
+  var closeBtn = document.getElementById('mobile-close');
+  function openMenu() {
+    menu.classList.add('open');
+    btn.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeMenu() {
+    menu.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+  btn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    menu.classList.contains('open') ? closeMenu() : openMenu();
+  });
+  closeBtn.addEventListener('click', closeMenu);
+  menu.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', closeMenu);
+  });
+  document.addEventListener('click', function(e) {
+    if (menu.classList.contains('open') && !menu.contains(e.target) && !btn.contains(e.target)) {
+      closeMenu();
+    }
+  });
+})();
+</script>
 
 </body>
 </html>
