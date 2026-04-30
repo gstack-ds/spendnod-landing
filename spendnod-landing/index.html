@@ -461,10 +461,9 @@ footer {
     <div class="nav-links">
       <a href="#how-it-works">How it works</a>
       <a href="#features">Features</a>
-      <a href="#pricing">Pricing</a>
-      <a href="/enterprise">Enterprise</a>
+      <a href="/enterprise">Enterprise support</a>
       <a href="https://api.spendnod.com/docs" target="_blank">API docs</a>
-      <button class="nav-cta" onclick="window.open('https://app.spendnod.com','_blank')">Get started free</button>
+      <button class="nav-cta" onclick="window.open('https://github.com/gstack-ds/spendnod','_blank')">Get started</button>
     </div>
     <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -476,20 +475,24 @@ footer {
   <button class="mobile-menu-close" id="mobile-close" aria-label="Close menu">&#x2715;</button>
   <a href="#how-it-works">How it works</a>
   <a href="#features">Features</a>
-  <a href="#pricing">Pricing</a>
-  <a href="/enterprise">Enterprise</a>
+  <a href="/enterprise">Enterprise support</a>
   <a href="https://api.spendnod.com/docs" target="_blank">API docs</a>
-  <button class="mobile-menu-cta" onclick="window.open('https://app.spendnod.com','_blank')">Get started free</button>
+  <button class="mobile-menu-cta" onclick="window.open('https://github.com/gstack-ds/spendnod','_blank')">Get started</button>
 </div>
 
 <!-- HERO -->
 <div class="hero">
-  <div class="hero-badge fade-up"><span class="dot"></span> MCP integration live - works with Claude, OpenClaw, ChatGPT & more</div>
-  <h1 class="fade-up fade-up-1">Add one URL.<br><span class="gradient">Your agent asks permission.</span></h1>
-  <p class="fade-up fade-up-2">SpendNod is the authorization layer for AI agent transactions. Your agent connects via MCP, checks in before every purchase, and waits for your approval on anything above your threshold. No code required.</p>
+  <div class="hero-badge fade-up"><span class="dot"></span> Open source &middot; MIT licensed &middot; Self-host anywhere</div>
+  <h1 class="fade-up fade-up-1">Open-source authorization<br><span class="gradient">gateway for AI agents.</span></h1>
+  <p class="fade-up fade-up-2">SpendNod is a free, open-source, human-in-the-loop authorization gateway for AI agents. Connect via MCP, set your rules, and your agents check in before every transaction. Self-host on any infrastructure — no vendor lock-in, no subscription.</p>
   <div class="hero-buttons fade-up fade-up-3">
-    <button class="btn-primary" onclick="window.open('https://app.spendnod.com','_blank')">Start free - 200 requests/month</button>
-    <button class="btn-secondary" onclick="window.open('https://api.spendnod.com/docs','_blank')">View API docs</button>
+    <button class="btn-primary" onclick="window.open('https://github.com/gstack-ds/spendnod','_blank')">Get started on GitHub</button>
+    <button class="btn-secondary" onclick="window.open('https://github.com/gstack-ds/spendnod','_blank')">View on GitHub</button>
+  </div>
+  <div class="fade-up fade-up-4" style="display:flex;gap:10px;justify-content:center;margin-top:20px;flex-wrap:wrap;">
+    <span style="display:inline-flex;align-items:center;gap:6px;background:var(--emerald-dim);border:1px solid rgba(16,185,129,0.25);border-radius:20px;padding:5px 14px;font-size:12px;font-weight:600;color:var(--emerald);">MIT License</span>
+    <span style="display:inline-flex;align-items:center;gap:6px;background:var(--accent-glow);border:1px solid rgba(79,70,229,0.25);border-radius:20px;padding:5px 14px;font-size:12px;font-weight:600;color:var(--accent-light);">Free forever</span>
+    <span style="display:inline-flex;align-items:center;gap:6px;background:rgba(248,250,252,0.05);border:1px solid var(--border);border-radius:20px;padding:5px 14px;font-size:12px;font-weight:600;color:var(--text-dim);">Self-host anywhere</span>
   </div>
 
   <!-- TABBED CODE PREVIEW -->
@@ -691,79 +694,15 @@ footer {
   </div>
 </section>
 
-<!-- PRICING -->
-<section id="pricing">
-  <div class="section-inner">
-    <div class="pricing-header">
-      <div class="launch-tag">Early access - limited time</div>
-      <h2 class="section-title">Launch pricing</h2>
-      <p class="section-desc" style="margin-left: auto; margin-right: auto;">Lock in doubled limits forever. Prices go up after the first 500 signups.</p>
-    </div>
-
-    <div class="pricing-grid">
-      <div class="tier">
-        <div class="tier-name">Free</div>
-        <div class="tier-desc">Try it out. See your agents ask permission.</div>
-        <div><span class="price">$0</span></div>
-        <div class="price-period">forever</div>
-        <ul class="tier-features">
-          <li><span class="check">&#10003;</span><span><span class="strike">100 requests/mo</span> <span class="upgrade">200/mo</span></span></li>
-          <li><span class="check">&#10003;</span><span><span class="strike">1 agent</span> <span class="upgrade">2 agents</span></span></li>
-          <li><span class="check">&#10003;</span><span>All features included</span></li>
-        </ul>
-        <button class="tier-btn" onclick="window.open('https://app.spendnod.com','_blank')">Get started free</button>
-      </div>
-
-      <div class="tier">
-        <div class="tier-name">Starter</div>
-        <div class="tier-desc">For developers running agents in production.</div>
-        <div class="price-old">$39/mo</div>
-        <div><span class="price">$29</span><span class="price-period">/mo</span><span class="deal">25% off</span></div>
-        <ul class="tier-features">
-          <li><span class="check">&#10003;</span><span><span class="strike">2,000 requests/mo</span> <span class="upgrade">5,000/mo</span></span></li>
-          <li><span class="check">&#10003;</span><span><span class="strike">5 agents</span> <span class="upgrade">10 agents</span></span></li>
-          <li><span class="check">&#10003;</span><span>All features included</span></li>
-        </ul>
-        <button class="tier-btn" onclick="window.open('https://app.spendnod.com','_blank')">Sign up now</button>
-      </div>
-
-      <div class="tier featured">
-        <div class="pop">Most popular</div>
-        <div class="tier-name">Pro</div>
-        <div class="tier-desc">For teams that rely on agent automation daily.</div>
-        <div class="price-old">$129/mo</div>
-        <div><span class="price">$99</span><span class="price-period">/mo</span><span class="deal">23% off</span></div>
-        <ul class="tier-features">
-          <li><span class="check">&#10003;</span><span><span class="strike">25,000 requests/mo</span> <span class="upgrade">50,000/mo</span></span></li>
-          <li><span class="check">&#10003;</span><span><span class="strike">25 agents</span> <span class="upgrade">50 agents</span></span></li>
-          <li><span class="check">&#10003;</span><span>All features included</span></li>
-        </ul>
-        <button class="tier-btn primary" onclick="window.open('https://app.spendnod.com','_blank')">Sign up now</button>
-      </div>
-
-      <div class="tier">
-        <div class="tier-name">Enterprise</div>
-        <div class="tier-desc">Compliance, audit trails, policy enforcement, and human-in-the-loop oversight for your entire agent fleet.</div>
-        <div style="margin: 24px 0 8px; font-size: 15px; color: var(--text-dim);">Custom pricing - built around your scale.</div>
-        <ul class="tier-features">
-          <li><span class="check">&#10003;</span><span class="highlight">Unlimited requests + agents</span></li>
-          <li><span class="check">&#10003;</span><span>Full audit trail + compliance reporting</span></li>
-          <li><span class="check">&#10003;</span><span>Policy engine + approval workflows</span></li>
-          <li><span class="check">&#10003;</span><span>EU AI Act ready</span></li>
-          <li><span class="check">&#10003;</span><span>Dedicated support + onboarding</span></li>
-        </ul>
-        <button class="tier-btn" onclick="window.location.href='/enterprise'">Learn more about Enterprise</button>
-      </div>
-    </div>
-    <p class="pricing-note">Launch pricing locks in for the lifetime of your account. Every plan includes MCP server, REST API, Python SDK, rule engine, dashboard, and audit logging. You only pay for scale.</p>
-  </div>
-</section>
 
 <!-- CTA -->
 <div class="cta-section">
-  <h2>Your agents are spending money.<br>Shouldn't you have a say?</h2>
-  <p>Add one URL. Set your rules. Keep your humans in the loop.</p>
-  <button class="btn-primary" onclick="window.open('https://app.spendnod.com','_blank')">Get started - it's free</button>
+  <h2>Open source. Self-hosted.<br>Your agents, your infrastructure.</h2>
+  <p>Deploy SpendNod on your own infrastructure in minutes. Free forever, MIT licensed, no vendor lock-in.</p>
+  <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+    <button class="btn-primary" onclick="window.open('https://github.com/gstack-ds/spendnod','_blank')">Get started on GitHub</button>
+    <button class="btn-secondary" onclick="window.location.href='/enterprise'">Enterprise support</button>
+  </div>
 </div>
 
 <!-- FOOTER -->
@@ -771,10 +710,10 @@ footer {
   <div class="footer-inner">
     <div class="footer-left">&copy; 2026 Stack Industries LLC. All rights reserved.</div>
     <div class="footer-links">
+      <a href="https://github.com/gstack-ds/spendnod" target="_blank">GitHub</a>
       <a href="/terms">Terms of Service</a>
       <a href="/privacy">Privacy Policy</a>
       <a href="https://api.spendnod.com/docs" target="_blank">API Docs</a>
-
     </div>
   </div>
 </footer>
