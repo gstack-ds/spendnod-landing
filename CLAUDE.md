@@ -20,7 +20,7 @@ favicons/                          — Favicon assets (do not edit)
 ```
 
 ## Current State (as of 2026-04-30)
-SpendNod was repositioned from a paid SaaS to a free, open-source project. All pricing tiers removed. Primary CTAs now point to GitHub.
+SpendNod was repositioned from a paid SaaS to a free, open-source project. All pricing tiers removed. Primary CTAs now point to https://app.spendnod.com (hosted version); GitHub links remain as secondary CTAs.
 
 ## Design Decisions Log
 
@@ -30,9 +30,11 @@ SpendNod was repositioned from a paid SaaS to a free, open-source project. All p
 | 2026-04-30 | Keep enterprise page as managed hosting lead gen | Contact-us funnel for teams that don't want to self-host |
 | 2026-04-30 | Retain existing CSS (including pricing styles) | Unused CSS is harmless; avoids risk of breaking layout |
 | 2026-04-30 | Both enterprise pages kept in sync | `enterprise/` (root) and `spendnod-landing/enterprise/` serve same content |
+| 2026-04-30 | Add hosted CTA alongside self-host | Dual path: "Start free" → app.spendnod.com (primary), "View/Self-host on GitHub" (secondary) |
 
 ## Current TODOs
 
+- [x] **DONE** — Primary CTAs updated: nav + hero + bottom CTA all point to app.spendnod.com
 - [ ] **HIGH** — Update page `<title>` tags to reflect open-source positioning (currently still says "Human Authorization for AI Agent Transactions")
 - [ ] **HIGH** — Terms and Privacy pages still reference plan tiers ($0, Starter, Pro) — update once attorney review complete
 - [ ] **MED** — `enterprise/index.html` (root) lacks PostHog analytics and hamburger mobile nav; consider syncing with nested version
@@ -45,6 +47,7 @@ SpendNod was repositioned from a paid SaaS to a free, open-source project. All p
 - **Do not edit vercel.json or favicon files** — treat as locked
 - **Both enterprise pages must stay in sync** — apply changes to both `enterprise/index.html` and `spendnod-landing/enterprise/index.html`
 - **No build step** — changes to HTML files are deployed directly by Vercel on push to main
+- **CTA target** — primary CTA is app.spendnod.com (hosted), not GitHub; GitHub is always secondary
 
 ## Gotchas Log
 
