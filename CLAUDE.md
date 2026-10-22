@@ -13,8 +13,8 @@ Static HTML landing page for SpendNod — a free, open-source, self-hosted, huma
 spendnod-landing/                  — Vercel Root Directory: the ONLY folder served at www.spendnod.com
 spendnod-landing/index.html        — Main landing page
 spendnod-landing/enterprise/       — RETIRED: unlinked, /enterprise 308-redirects to / (file kept for reuse)
-spendnod-landing/terms/            — Terms of Service (attorney review pending — do not edit)
-spendnod-landing/privacy/          — Privacy Policy (attorney review pending — do not edit)
+spendnod-landing/terms/            — Terms of Service (legal wording locked, attorney review pending; chrome may change)
+spendnod-landing/privacy/          — Privacy Policy (legal wording locked, attorney review pending; chrome may change)
 spendnod-landing/vercel.json       — Served Vercel config: cleanUrls, trailingSlash, /enterprise redirect
 enterprise/                        — Root-level enterprise copy, NOT served
 vercel.json                        — Root copy, NOT used by the deploy
@@ -33,23 +33,24 @@ SpendNod is a free, open-source project. No pricing tiers. Primary CTAs point to
 | 2026-04-30 | Add hosted CTA alongside self-host | Dual path: "Start free" → app.spendnod.com (primary), "View/Self-host on GitHub" (secondary) |
 | 2026-10-22 | Dated compliance claims and fine figures removed from marketing copy | EU AI Act mentions only state that human oversight and record keeping are core requirements for high-risk AI systems |
 | 2026-10-22 | Enterprise page retired, unlinked, and redirected to the homepage | It sold offerings SpendNod doesn't provide. Files kept in the repo for possible reuse. Supersedes the 2026-04-30 lead-gen and keep-in-sync decisions |
+| 2026-10-22 | Keep unserved root copies (`enterprise/`, `vercel.json`, `favicons/`) as they are | No changes, no deletion |
+| 2026-10-22 | Keep the `/enterprise/` redirect rule | Redundant with trailingSlash but harmless; review warning closed |
+| 2026-10-22 | Terms/Privacy lock covers legal wording only | Site chrome (nav, footer links, styles) may change |
+| 2026-10-22 | Homepage title mirrors the hero headline | Open-source positioning, keeps the "SpendNod - Page" title pattern |
 
 ## Current TODOs
 
 - [x] **DONE** — Primary CTAs updated: nav + hero + bottom CTA all point to app.spendnod.com
-- [ ] **HIGH** — Update page `<title>` tags to reflect open-source positioning (currently still says "Human Authorization for AI Agent Transactions")
+- [x] **DONE** - Homepage `<title>` updated to open-source positioning (2026-10-22)
 - [ ] **HIGH** — Terms and Privacy pages still reference plan tiers ($0, Starter, Pro) — update once attorney review complete
 - [ ] **MED** — Add GitHub star count or "Built by Stack Industries" badge to hero
 - [ ] **LOW** — Remove unused pricing CSS classes from stylesheets after content stabilizes (homepage `.compliance-banner` / `.compliance-date` are now unused too)
-- [ ] **LOW** - Root-level `enterprise/`, `vercel.json`, and `favicons/` are not served. Decide whether to delete them (by hand).
-- [ ] **LOW** - Review warning 2026-10-22: the `/enterprise/` redirect rule is redundant (trailingSlash already strips the slash, so the live chain is 2 hops). Keep or drop.
-- [ ] **LOW** - Review warning 2026-10-22: Terms/Privacy nav links were removed with explicit approval despite the attorney-review lock. Decide whether the lock rule should name a nav-only exception.
 
-**Next session starts with:** the HIGH `<title>` tag update.
+**Next session starts with:** the MED hero badge (the HIGH Terms/Privacy item waits on attorney review).
 
 ## Common Mistakes / Active Rules
 
-- **Do not edit terms or privacy pages** — attorney review pending as of 2026-04-30
+- **Terms and Privacy legal wording is locked** - attorney review pending as of 2026-04-30. The lock covers legal wording only; site chrome (nav, footer links, styles) may change.
 - **Do not edit vercel.json or favicon files** — treat as locked. Only `spendnod-landing/vercel.json` is live; it holds the /enterprise redirect.
 - **Enterprise page is retired** - don't re-link it or edit the enterprise files without a new decision
 - **No build step** — changes to HTML files are deployed directly by Vercel on push to main
