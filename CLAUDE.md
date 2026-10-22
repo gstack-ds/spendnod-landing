@@ -10,45 +10,51 @@ Static HTML landing page for SpendNod — a free, open-source, self-hosted, huma
 
 ## File Structure
 ```
+spendnod-landing/                  — Vercel Root Directory: the ONLY folder served at www.spendnod.com
 spendnod-landing/index.html        — Main landing page
-spendnod-landing/enterprise/       — Enterprise/managed hosting page (with PostHog + hamburger)
-enterprise/                        — Root-level enterprise page (older, no PostHog/hamburger)
+spendnod-landing/enterprise/       — RETIRED: unlinked, /enterprise 308-redirects to / (file kept for reuse)
 spendnod-landing/terms/            — Terms of Service (attorney review pending — do not edit)
 spendnod-landing/privacy/          — Privacy Policy (attorney review pending — do not edit)
-vercel.json                        — Vercel routing config (do not edit)
-favicons/                          — Favicon assets (do not edit)
+spendnod-landing/vercel.json       — Served Vercel config: cleanUrls, trailingSlash, /enterprise redirect
+enterprise/                        — Root-level enterprise copy, NOT served
+vercel.json                        — Root copy, NOT used by the deploy
+favicons/                          — Root-level favicon assets, NOT served (live copies sit in spendnod-landing/)
 ```
 
-## Current State (as of 2026-04-30)
-SpendNod was repositioned from a paid SaaS to a free, open-source project. All pricing tiers removed. Primary CTAs now point to https://app.spendnod.com (hosted version); GitHub links remain as secondary CTAs.
+## Current State (as of 2026-10-22)
+SpendNod is a free, open-source project. No pricing tiers. Primary CTAs point to https://app.spendnod.com (hosted version); GitHub links are secondary. The enterprise page is retired. EU AI Act copy carries no dates or fine figures.
 
 ## Design Decisions Log
 
 | Date | Decision | Rationale |
 |------|----------|-----------|
 | 2026-04-30 | Remove all pricing tiers | Pivoting to open-source; pricing removed from main and enterprise pages |
-| 2026-04-30 | Keep enterprise page as managed hosting lead gen | Contact-us funnel for teams that don't want to self-host |
 | 2026-04-30 | Retain existing CSS (including pricing styles) | Unused CSS is harmless; avoids risk of breaking layout |
-| 2026-04-30 | Both enterprise pages kept in sync | `enterprise/` (root) and `spendnod-landing/enterprise/` serve same content |
 | 2026-04-30 | Add hosted CTA alongside self-host | Dual path: "Start free" → app.spendnod.com (primary), "View/Self-host on GitHub" (secondary) |
+| 2026-10-22 | Dated compliance claims and fine figures removed from marketing copy | EU AI Act mentions only state that human oversight and record keeping are core requirements for high-risk AI systems |
+| 2026-10-22 | Enterprise page retired, unlinked, and redirected to the homepage | It sold offerings SpendNod doesn't provide. Files kept in the repo for possible reuse. Supersedes the 2026-04-30 lead-gen and keep-in-sync decisions |
 
 ## Current TODOs
 
 - [x] **DONE** — Primary CTAs updated: nav + hero + bottom CTA all point to app.spendnod.com
 - [ ] **HIGH** — Update page `<title>` tags to reflect open-source positioning (currently still says "Human Authorization for AI Agent Transactions")
 - [ ] **HIGH** — Terms and Privacy pages still reference plan tiers ($0, Starter, Pro) — update once attorney review complete
-- [ ] **MED** — `enterprise/index.html` (root) lacks PostHog analytics and hamburger mobile nav; consider syncing with nested version
 - [ ] **MED** — Add GitHub star count or "Built by Stack Industries" badge to hero
-- [ ] **LOW** — Remove unused pricing CSS classes from stylesheets after content stabilizes
+- [ ] **LOW** — Remove unused pricing CSS classes from stylesheets after content stabilizes (homepage `.compliance-banner` / `.compliance-date` are now unused too)
+- [ ] **LOW** - Root-level `enterprise/`, `vercel.json`, and `favicons/` are not served. Decide whether to delete them (by hand).
+- [ ] **LOW** - Review warning 2026-10-22: the `/enterprise/` redirect rule is redundant (trailingSlash already strips the slash, so the live chain is 2 hops). Keep or drop.
+- [ ] **LOW** - Review warning 2026-10-22: Terms/Privacy nav links were removed with explicit approval despite the attorney-review lock. Decide whether the lock rule should name a nav-only exception.
+
+**Next session starts with:** the HIGH `<title>` tag update.
 
 ## Common Mistakes / Active Rules
 
 - **Do not edit terms or privacy pages** — attorney review pending as of 2026-04-30
-- **Do not edit vercel.json or favicon files** — treat as locked
-- **Both enterprise pages must stay in sync** — apply changes to both `enterprise/index.html` and `spendnod-landing/enterprise/index.html`
+- **Do not edit vercel.json or favicon files** — treat as locked. Only `spendnod-landing/vercel.json` is live; it holds the /enterprise redirect.
+- **Enterprise page is retired** - don't re-link it or edit the enterprise files without a new decision
 - **No build step** — changes to HTML files are deployed directly by Vercel on push to main
 - **CTA target** — primary CTA is app.spendnod.com (hosted), not GitHub; GitHub is always secondary
 
 ## Gotchas Log
 
-*(none yet)*
+**Date:** 2026-10-22 | **What happened:** Headless Edge screenshot with a 390px window came out clipped on the right; the page laid out wider than 390px | **Root cause:** headless Edge enforces a minimum window width, so phone media queries never fired | **Fix:** screenshot a scratch wrapper page holding a 390px-wide iframe of the page (to open the mobile menu, click `#hamburger` from the wrapper, with `--allow-file-access-from-files`) | **Rule going forward:** phone-width checks need a 390px iframe wrapper, never a direct 390px window
