@@ -1,4 +1,8 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/enterprise", "destination": "/", "permanent": true },
+    { "source": "/enterprise/", "destination": "/", "permanent": true }
+  ]
 }
