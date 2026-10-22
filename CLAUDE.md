@@ -37,16 +37,18 @@ SpendNod is a free, open-source project. No pricing tiers. Primary CTAs point to
 | 2026-10-22 | Keep the `/enterprise/` redirect rule | Redundant with trailingSlash but harmless; review warning closed |
 | 2026-10-22 | Terms/Privacy lock covers legal wording only | Site chrome (nav, footer links, styles) may change |
 | 2026-10-22 | Homepage title mirrors the hero headline | Open-source positioning, keeps the "SpendNod - Page" title pattern |
+| 2026-10-22 | Hero credit is a "Built by Stack Industries" link badge to stackindustries.io, not a GitHub star count | Reuses the hero badge style with no new CSS and no status dot; beside the open-source badge on desktop, wraps under it on phone |
 
 ## Current TODOs
 
 - [x] **DONE** — Primary CTAs updated: nav + hero + bottom CTA all point to app.spendnod.com
 - [x] **DONE** - Homepage `<title>` updated to open-source positioning (2026-10-22)
 - [ ] **HIGH** — Terms and Privacy pages still reference plan tiers ($0, Starter, Pro) — update once attorney review complete
-- [ ] **MED** — Add GitHub star count or "Built by Stack Industries" badge to hero
+- [x] **DONE** - "Built by Stack Industries" hero badge added (2026-10-22)
+- [ ] **LOW** - Review warning 2026-10-22: the hero "Built by Stack Industries" link opens a new tab with no screen-reader cue. Consider an aria-label ending "(opens in new tab)".
 - [ ] **LOW** — Remove unused pricing CSS classes from stylesheets after content stabilizes (homepage `.compliance-banner` / `.compliance-date` are now unused too)
 
-**Next session starts with:** the MED hero badge (the HIGH Terms/Privacy item waits on attorney review).
+**Next session starts with:** the HIGH Terms/Privacy plan-tier update if attorney review is back; otherwise the LOW unused-CSS cleanup.
 
 ## Common Mistakes / Active Rules
 
